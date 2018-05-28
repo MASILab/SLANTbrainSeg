@@ -1,6 +1,8 @@
 # SLANT_brain_seg
 Deep Whole Brain Segmentation Using SLANT Method. 
+
 A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocal(http://braincolor.mindboggle.info/protocols/).
+
 It has been implemented as a single Docker.
 ```diff
 - Please cite the following MICCAI 2018 paper if you used the SLANT whole brain segmentation.
