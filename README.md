@@ -21,8 +21,7 @@ Ubuntu 16.04
 cuda 8.0
 Pytorch 0.2
 Docker version 1.13.1-cs9
-Nvidia-docker version 1.0.1 / 2.0.3
-singularity 2.4.2
+Nvidia-docker version 1.0.1 to 2.0.3
 
 
 ## install Docker
@@ -34,7 +33,7 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 
-## install singularity
+## install Nvidia-Docker
 ```
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
