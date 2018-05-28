@@ -29,18 +29,18 @@ export output_dir=$input_dir/output
 #run the docker
 sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
 ```
-You will see the final a segmentation file in "FinalResult"
-You will see the final a overlay pdf in "FinalPDF"
-You will see the final a txt file contains all label names and volume in "FinalVolTxt".
+- You will see the final a segmentation file in "FinalResult"
+- You will see the final a overlay pdf in "FinalPDF"
+- You will see the final a txt file contains all label names and volume in "FinalVolTxt".
 
 # Detailed envrioment setting  
 
 ## Testing platform
-Ubuntu 16.04
-cuda 8.0
-Pytorch 0.2
-Docker version 1.13.1-cs9
-Nvidia-docker version 1.0.1 to 2.0.3
+- Ubuntu 16.04
+- cuda 8.0
+- Pytorch 0.2
+- Docker version 1.13.1-cs9
+- Nvidia-docker version 1.0.1 to 2.0.3
 
 
 ## install Docker
