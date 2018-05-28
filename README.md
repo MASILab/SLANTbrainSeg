@@ -20,13 +20,16 @@ You can run the following command or change the "input_dir", then you will have 
 export input_dir=/home/input_dir   
 # make that directory
 sudo mkdir $input_dir
-# download the test volume file
+# download the test volume file, you can even put multiple input files here, no worries.
 sudo wget -O  $input_dir/test_volume.nii.gz  https://www.nitrc.org/frs/download.php/10666/test_volume.nii.gz
 # set output directory
-output_dir=$input_dir/output
+export output_dir=$input_dir/output
 #run the docker
 sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
 ```
+You will see the final a segmentation file in "FinalResult"
+You will see the final a overlay pdf in "FinalPDF"
+You will see the final a txt file contains all label names and volume in "FinalVolTxt".
 
 # Detailed envrioment setting  
 
