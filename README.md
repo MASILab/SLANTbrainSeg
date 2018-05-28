@@ -9,11 +9,12 @@ Yuankai Huo, Zhoubing Xu, Katherine Aboud, Parasanna Parvathaneni, Shunxing Bao,
 In International Conference on Medical Image Computing and Computer-Assisted Intervention, MICCAI 2018. 
 
 ## Quick Start
-#### get our docker image
+#### Get our docker image
 ```
 sudo docker pull masidocker/spiders:deep_brain_seg_v1_0_0
 ```
-#### run SLANT brain segmentation
+#### Run SLANT brain segmentation
+You can run the following command or change the "input_dir", then you will have the final segmentation results in output_dir
 ```
 export input_dir=/home/input_dir   #you need to specify the directory
 sudo mkdir $input_dir
