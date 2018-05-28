@@ -16,9 +16,11 @@ sudo docker pull masidocker/spiders:deep_brain_seg_v1_0_0
 #### run SLANT brain segmentation
 ```
 export input_dir=/home/input_dir   #you need to specify the directory
+sudo mkdir $input_dir
+cd $input_dir
 wget https://www.nitrc.org/frs/download.php/10666/test_volume.nii.gz
-
-sudo nvidia-docker run -it --rm -v /home/yuankai/input_dir/:/INPUTS/ -v /home/yuankai/output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
+output_dir=$input_dir/output
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
 ```
 
 # Detailed envrioment setting  
