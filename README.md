@@ -5,12 +5,8 @@ It has been implemented as a single Docker.
 ```diff
 - Please cite the MICCAI 2018 paper if you used the SLANT whole brain segmentation.
 ```
-```diff
-+ Yuankai Huo, Zhoubing Xu, Katherine Aboud, Parasanna Parvathaneni, Shunxing Bao, 
-Camilo Bermudez, Susan M. Resnick, Laurie E. Cutting, and Bennett A. Landman. 
-"Spatially Localized Atlas Network Tiles Enables 3D Whole Brain Segmentation" 
+Yuankai Huo, Zhoubing Xu, Katherine Aboud, Parasanna Parvathaneni, Shunxing Bao, Camilo Bermudez, Susan M. Resnick, Laurie E. Cutting, and Bennett A. Landman.  "Spatially Localized Atlas Network Tiles Enables 3D Whole Brain Segmentation" 
 In International Conference on Medical Image Computing and Computer-Assisted Intervention, MICCAI 2018. 
-```
 
 ## Quick Start
 #### get our docker image
