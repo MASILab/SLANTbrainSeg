@@ -1,8 +1,21 @@
 # SLANT_brain_seg
-Deep Whole Brain Segmentation Using SLANT Method
+Deep Whole Brain Segmentation Using SLANT Method. It has been implemented as a single Docker
+
+## get the Docker image
+sudo docker pull masidocker/spiders:deep_brain_seg_v1_0_0
+
+## run the Docker
+sudo nvidia-docker run -it --rm -v /home/yuankai/input_dir/:/INPUTS/ -v /home/yuankai/output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
+
+# Detailed envrioment setting
+
+## Testing platform
+Ubuntu 16.04
+cuda 8.0
+Pytorch 0.2
 Docker version 1.13.1-cs9
 Nvidia-docker version 1.0.1 / 2.0.3
-sigularity 2.4.2
+singularity 2.4.2
 
 
 ## install Docker
