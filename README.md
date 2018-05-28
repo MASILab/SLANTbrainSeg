@@ -1,12 +1,15 @@
 # SLANT_brain_seg
-Deep Whole Brain Segmentation Using SLANT Method. It has been implemented as a single Docker
+Deep Whole Brain Segmentation Using SLANT Method. 
+A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocal(http://braincolor.mindboggle.info/protocols/).
+It has been implemented as a single Docker.
+Please cite the MICCAI 2018 paper if you used the SLANT whole brain segmentation
 
 ## Quick Start
-### get our docker image
+#### get our docker image
 ```
 sudo docker pull masidocker/spiders:deep_brain_seg_v1_0_0
 ```
-## run SLANT brain segmentation
+#### run SLANT brain segmentation
 ```
 export input_dir=/home/input_dir   #you need to specify the directory
 wget https://www.nitrc.org/frs/download.php/10666/test_volume.nii.gz
