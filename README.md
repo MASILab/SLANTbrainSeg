@@ -12,7 +12,7 @@ In International Conference on Medical Image Computing and Computer-Assisted Int
 
 ```diff
 + The code and docker are free for noncommercial purposes.
-- The licence.md shows the terms for commercial and for-profit purposes.
++ The licence.md shows the terms for commercial and for-profit purposes.
 ```
 
 ## Quick Start
