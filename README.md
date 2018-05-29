@@ -10,6 +10,11 @@ It has been implemented as a single Docker.
 Yuankai Huo, Zhoubing Xu, Katherine Aboud, Parasanna Parvathaneni, Shunxing Bao, Camilo Bermudez, Susan M. Resnick, Laurie E. Cutting, and Bennett A. Landman.  "Spatially Localized Atlas Network Tiles Enables 3D Whole Brain Segmentation" 
 In International Conference on Medical Image Computing and Computer-Assisted Intervention, MICCAI 2018. 
 
+```diff
++ The code and docker are free for noncommercial purposes.
+- The licence.md shows the terms for commercial and for-profit purposes.
+```
+
 ## Quick Start
 #### Get our docker image
 ```
