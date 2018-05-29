@@ -38,6 +38,12 @@ sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS m
 - You will see the final a overlay pdf in "FinalPDF"
 - You will see the final a txt file contains all label names and volume in "FinalVolTxt".
 
+# Source Code
+The SLANT is a whole brain segmentation pipeline that contains (1) pre-processing, (2) deep learning, (3) post-processing, which have all been contained in the Docker. The main scratch in Docker is the "run_deep_brain_seg.sh". The related source code and binary files have been included in the Docker. They can also be found in the "matlab" and "python".
+
+- Pre- and Post-processing code can be found in "matlab"
+- Train and testing code for deep learning part can be found in "python"
+
 # Detailed envrioment setting  
 
 ## Testing platform
