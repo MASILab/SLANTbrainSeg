@@ -18,7 +18,7 @@ In International Conference on Medical Image Computing and Computer-Assisted Int
 ## Quick Start
 #### Get our docker image
 ```
-sudo docker pull masidocker/spiders:deep_brain_seg_v1_0_0
+sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0
 ```
 #### Run SLANT brain segmentation
 You can run the following command or change the "input_dir", then you will have the final segmentation results in output_dir
