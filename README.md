@@ -38,15 +38,15 @@ sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS m
 - You will see the final a overlay pdf in "FinalPDF"
 - You will see the final a txt file contains all label names and volume in "FinalVolTxt".
 
-# Source Code
+## Source Code
 The SLANT is a whole brain segmentation pipeline that contains (1) pre-processing, (2) deep learning, (3) post-processing, which have all been contained in the Docker. The main scratch in Docker is the "run_deep_brain_seg.sh". The related source code and binary files have been included in the Docker. They can also be found in the "matlab" and "python".
 
 - Pre- and Post-processing code can be found in "matlab"
 - Train and testing code for deep learning part can be found in "python"
 
-# Detailed envrioment setting  
+## Detailed envrioment setting  
 
-## Testing platform
+#### Testing platform
 - Ubuntu 16.04
 - cuda 8.0
 - Pytorch 0.2
@@ -54,7 +54,7 @@ The SLANT is a whole brain segmentation pipeline that contains (1) pre-processin
 - Nvidia-docker version 1.0.1 to 2.0.3
 
 
-## install Docker
+#### install Docker
 ```
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -63,7 +63,7 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 
-## install Nvidia-Docker
+#### install Nvidia-Docker
 ```
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
