@@ -5,7 +5,7 @@ A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocal(http:/
 
 It has been implemented as a single Docker.
 ```diff
-- Please cite the following MICCAI 2018 paper if you used the SLANT whole brain segmentation.
+- Please cite the following MICCAI 2018 paper [SLANT](https://arxiv.org/pdf/1806.00546.pdf), if you used the SLANT whole brain segmentation.
 ```
 Yuankai Huo, Zhoubing Xu, Katherine Aboud, Parasanna Parvathaneni, Shunxing Bao, Camilo Bermudez, Susan M. Resnick, Laurie E. Cutting, and Bennett A. Landman.  "Spatially Localized Atlas Network Tiles Enables 3D Whole Brain Segmentation" 
 In International Conference on Medical Image Computing and Computer-Assisted Intervention, MICCAI 2018. 
