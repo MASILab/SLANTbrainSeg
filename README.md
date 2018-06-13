@@ -2,7 +2,7 @@
 ### [[PyTorch]](https://github.com/MASILab/SLANTbrainSeg/tree/master/python) [[project page]](https://github.com/MASILab/SLANTbrainSeg/)   [[paper]](https://arxiv.org/pdf/1806.00546.pdf)
 
 A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocal(http://braincolor.mindboggle.info/protocols/).
-<img src="https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/test_volume_result.jpg" width="1000px"/>
+<img src="https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/test_volume_result.jpg" width="500px"/>
 
 It has been implemented as a single Docker.
 ```diff
