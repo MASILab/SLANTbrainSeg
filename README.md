@@ -47,6 +47,12 @@ The SLANT is a whole brain segmentation pipeline that contains (1) pre-processin
 - Pre- and Post-processing code can be found in "matlab"
 - Train and testing code for deep learning part can be found in "python"
 
+## List of Training Data
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
 ## Detailed envrioment setting  
 
 #### Testing platform
