@@ -47,7 +47,7 @@ The SLANT is a whole brain segmentation pipeline that contains (1) pre-processin
 - Pre- and Post-processing code can be found in "matlab"
 - Train and testing code for deep learning part can be found in "python"
 
-### If You Only Have CPU, you can use the following CPU version of the docker. (50GB Memory might be required using CPU!)
+### If you only have CPU, you can use the following CPU version of the docker. (50GB Memory might be required using CPU!)
 ```
 sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0_CPU
 ```
