@@ -47,6 +47,11 @@ The SLANT is a whole brain segmentation pipeline that contains (1) pre-processin
 - Pre- and Post-processing code can be found in "matlab"
 - Train and testing code for deep learning part can be found in "python"
 
+## If You Only Have CPU, you can use the following CPU version of the docker. (50GB Memory might be required using CPU!)
+```
+sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0_CPU
+```
+
 ## List of 45 Training Data and 5 Validation Data from OASIS study
 ### 45 Training
 OAS1_0061_MR1|OAS1_0080_MR1|OAS1_0092_MR1|OAS1_0101_MR1|OAS1_0117_MR1|OAS1_0145_MR1|OAS1_0150_MR1|OAS1_0156_MR1|OAS1_0191_MR1|OAS1_0202_MR1|OAS1_0230_MR1|OAS1_0236_MR1|OAS1_0239_MR1|OAS1_0249_MR1|OAS1_0285_MR1|OAS1_0368_MR1|OAS1_0395_MR1|OAS1_0091_MR1|OAS1_0005_MR1|OAS1_0340_MR1|OAS1_0417_MR1|OAS1_0069_MR1|OAS1_0173_MR1|OAS1_0040_MR1|OAS1_0088_MR1|OAS1_0074_MR1|OAS1_0282_MR1|OAS1_0050_MR1|OAS1_0443_MR1|OAS1_0331_MR1|OAS1_0389_MR1|OAS1_0274_MR1|OAS1_0456_MR1|OAS1_0070_MR1|OAS1_0358_MR1|OAS1_0300_MR1|OAS1_0124_MR1|OAS1_0220_MR1|OAS1_0263_MR1|OAS1_0013_MR1|OAS1_0113_MR1|OAS1_0317_MR1|OAS1_0083_MR1|OAS1_0270_MR1|OAS1_0278_MR1
