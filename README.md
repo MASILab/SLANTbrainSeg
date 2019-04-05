@@ -93,6 +93,7 @@ sudo apt-get install -y nvidia-docker2
 
 ## Detailed Results for Each ROI
 The detailed measurement of Figure 9 in [NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811919302307) paper
+
 Joint Label Fusion Multi Atlas: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/Figure9_JLF_MAS.csv)
 Non Local Spatial STAPLE Multi Atlas: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/Figure9_NLSS_MAS.csv)
 Patch CNN: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/Figure9_Patch_CNN.csv)
