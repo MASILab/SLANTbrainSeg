@@ -38,7 +38,7 @@ sudo wget -O  $input_dir/test_volume.nii.gz  https://www.nitrc.org/frs/download.
 # set output directory
 export output_dir=$input_dir/output
 #run the docker
-sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS vuiiscci/slant:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
 ```
 - You will see the final a segmentation file in "FinalResult"
 - You will see the final a overlay pdf in "FinalPDF"
