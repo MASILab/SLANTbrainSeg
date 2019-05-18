@@ -1,7 +1,7 @@
 # SLANT: Deep Whole Brain High Resolution Segmentation 
 ### [[PyTorch]](https://github.com/MASILab/SLANTbrainSeg/tree/master/python) [[project page]](https://github.com/MASILab/SLANTbrainSeg/)   [[NeuroImage paper]](https://arxiv.org/pdf/1903.12152.pdf) [[MICCAI paper]](https://arxiv.org/pdf/1806.00546.pdf)
 
-A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocal(http://braincolor.mindboggle.info/protocols/).
+A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocol(http://braincolor.mindboggle.info/protocols/).
 <img src="https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/test_volume_result.jpg" width="600px"/>
 
 It has been implemented as a single Docker.
@@ -27,7 +27,7 @@ In International Conference on Medical Image Computing and Computer-Assisted Int
 sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0
 ```
 #### Run SLANT brain segmentation
-You can run the following command or change the "input_dir", then you will have the final segmentation results in output_dir
+You can run the following command or change the `input_dir`, then you will have the final segmentation results in `output_dir`
 ```
 # you need to specify the input directory
 export input_dir=/home/input_dir   
@@ -45,7 +45,7 @@ sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS v
 - You will see the final a txt file contains all label names and volume in "FinalVolTxt".
 
 ## Source Code
-The SLANT is a whole brain segmentation pipeline that contains (1) pre-processing, (2) deep learning, (3) post-processing, which have all been contained in the Docker. The main scratch in Docker is the "run_deep_brain_seg.sh". The related source code and binary files have been included in the Docker. They can also be found in the "matlab" and "python".
+The SLANT is a whole brain segmentation pipeline that contains (1) pre-processing, (2) deep learning, (3) post-processing, which have all been contained in the Docker. The main scratch in Docker is the `run_deep_brain_seg.sh`. The related source code and binary files have been included in the Docker. They can also be found in the "matlab" and "python".
 
 - Pre- and Post-processing code can be found in "matlab"
 - Train and testing code for deep learning part can be found in "python"
@@ -63,7 +63,7 @@ OAS1_0111_MR1|OAS1_0353_MR2|OAS1_0032_MR1|OAS1_0379_MR1|OAS1_0255_MR1
 ### You can download the list [HERE](https://github.com/MASILab/SLANTbrainSeg/blob/master/SLANT_neuroimage_train_test_split.xlsx)
 
 
-## Detailed envrioment setting  
+## Detailed environment setting  
 
 #### Testing platform
 - Ubuntu 16.04
