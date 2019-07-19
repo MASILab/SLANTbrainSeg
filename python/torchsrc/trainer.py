@@ -262,7 +262,7 @@ class Trainer(object):
 
             model_pth = '%s/model_epoch_%04d.pth' % (out, epoch)
 
-            if self.finetune:
+            if self.finetune and epoch==0:
                 old_out = out.replace('finetune_out','test_out')
                 old_model_pth = '%s/model_epoch_%04d.pth' % (old_out, self.fineepoch)
                 self.model.load_state_dict(torch.load(old_model_pth))
