@@ -71,6 +71,7 @@ OAS1_0111_MR1|OAS1_0353_MR2|OAS1_0032_MR1|OAS1_0379_MR1|OAS1_0255_MR1
 - Pytorch 0.2
 - Docker version 1.13.1-cs9
 - Nvidia-docker version 1.0.1 to 2.0.3
+- GPU: NVIDIA TITIAN 12GB
 
 
 #### install Docker
