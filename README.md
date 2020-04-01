@@ -93,6 +93,8 @@ sudo apt-get install -y nvidia-docker2
 ```
 
 ## Detailed Results for Each ROI
+The region look up table: [Download TXT](https://github.com/MASILab/SLANTbrainSeg/blob/master/BrainColorLUT.txt)
+
 The detailed measurement of Figure 9 in [NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811919302307) paper
 
 Joint Label Fusion Multi Atlas: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/Figure9_JLF_MAS.csv)
