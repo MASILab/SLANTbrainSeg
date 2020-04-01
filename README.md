@@ -93,7 +93,7 @@ sudo apt-get install -y nvidia-docker2
 ```
 
 ## Detailed Results for Each ROI
-The region look up table: [Download TXT](https://github.com/MASILab/SLANTbrainSeg/blob/master/BrainColorLUT.txt)
+The region look up table: [Download TXT](https://github.com/MASILab/SLANTbrainSeg/blob/master/BrainColorLUT.txt) , the LUT file can be loaded in FreeSurfer's FreeView tool directly.
 
 The detailed measurement of Figure 9 in [NeuroImage](https://www.sciencedirect.com/science/article/pii/S1053811919302307) paper
 
