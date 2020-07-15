@@ -121,5 +121,5 @@ export INDIR=/data/mcr/huoy1/test_singularity/input_contain
 export OUTDIR=/data/mcr/huoy1/test_singularity/output_contain
 export slantDIR=/data/mcr/huoy1/SLANT_cpu
 export tempDIR=/data/mcr/huoy1/test_singularity/tmp
-singularity run --nv -e --contain -B $INDIR:/INPUTS -B $OUTDIR:/OUTPUTS -B $tempDIR:/tmp  $slantDIR/slant_v1_contain.simg /extra/run_deep_brain_seg.sh
+singularity run --nv -e -B $INDIR:/INPUTS -B $OUTDIR:/OUTPUTS -B $tempDIR:/tmp  $slantDIR/slant_v1_contain.simg /extra/run_deep_brain_seg.sh
 ```
