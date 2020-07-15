@@ -109,3 +109,7 @@ SLANT 8: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/scr
 
 SLANT 27: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/Figure9_SLANT_27.csv)
 
+
+
+## build singularity from docker
+singularity build slant_v1.simg docker://vuiiscci/slant:deep_brain_seg_v1_0_0_CPU
