@@ -112,4 +112,14 @@ SLANT 27: [Download CSV](https://github.com/MASILab/SLANTbrainSeg/blob/master/sc
 
 
 ## build singularity from docker
+```
 singularity build slant_v1.simg docker://vuiiscci/slant:deep_brain_seg_v1_0_0_CPU
+```
+## run singularity
+```
+export INDIR=/data/mcr/huoy1/test_singularity/input_contain
+export OUTDIR=/data/mcr/huoy1/test_singularity/output_contain
+export slantDIR=/data/mcr/huoy1/SLANT_cpu
+export tempDIR=/data/mcr/huoy1/test_singularity/tmp
+singularity run --nv -e --contain -B $INDIR:/INPUTS -B $OUTDIR:/OUTPUTS -B $tempDIR:/tmp  $slantDIR/slant_v1_contain.simg /extra/run_deep_brain_seg.sh
+```
