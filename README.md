@@ -24,7 +24,7 @@ In International Conference on Medical Image Computing and Computer-Assisted Int
 ## Quick Start
 #### Get our docker image
 ```
-sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0
+sudo docker pull masidocker/public:deep_brain_seg_v1_1_0
 ```
 #### Run SLANT brain segmentation
 You can run the following command or change the `input_dir`, then you will have the final segmentation results in `output_dir`
@@ -38,7 +38,7 @@ sudo wget -O  $input_dir/test_volume.nii.gz  https://www.nitrc.org/frs/download.
 # set output directory
 export output_dir=$input_dir/output
 #run the docker
-sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS vuiiscci/slant:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/public:deep_brain_seg_v1_1_0 /extra/run_deep_brain_seg.sh
 ```
 - You will see the final a segmentation file in "FinalResult"
 - You will see the final a overlay pdf in "FinalPDF"
@@ -123,3 +123,20 @@ export slantDIR=/data/mcr/huoy1/SLANT_cpu
 export tempDIR=/data/mcr/huoy1/test_singularity/tmp
 singularity run --nv -e -B $INDIR:/INPUTS -B $OUTDIR:/OUTPUTS -B $tempDIR:/tmp  $slantDIR/slant_v1_contain.simg /extra/run_deep_brain_seg.sh
 ```
+
+
+
+
+## Previous versions
+### Updates 08/01/2020,  fix the number of thread to 1 to solve the reproducibility issue cased by N4 correct
+```
+sudo docker pull vuiiscci/slant:deep_brain_seg_v1_0_0
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS vuiiscci/slant:deep_brain_seg_v1_0_0 /extra/run_deep_brain_seg.sh
+```
+
+
+
+
+
+
+
