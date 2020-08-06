@@ -2,7 +2,7 @@
 
 start=$(date +%s.%N)
 # clean up
-rm -r /OUTPUTS/*
+mkdir /OUTPUTS/outputs
 
 # preprocessing for spleen
 /extra/run_Deep_brain_preprocessing
