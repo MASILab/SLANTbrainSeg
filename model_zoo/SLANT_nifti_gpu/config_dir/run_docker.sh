@@ -8,7 +8,7 @@ export input_dir=$LOCAL_INPUTS_PATH/NIFTI
 # set output directory
 export output_dir=$LOCAL_OUTPUTS_PATH/temp
 #run the docker
-#sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/public:deep_brain_seg_v1_1_0 /extra/run_deep_brain_seg.sh
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/public:deep_brain_seg_v1_1_0 /extra/run_deep_brain_seg.sh
 
 #orgnize your outcomes based on the required format of the model zoo
 mkdir $LOCAL_OUTPUTS_PATH/PDF
