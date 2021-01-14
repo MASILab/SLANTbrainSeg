@@ -1,0 +1,9 @@
+sysinfo:
+  "name": "slant (gpu)"
+  "release date": "Dec. 20, 2020"
+  "vendor": 'Vanderbilt University'
+  "author": 'Yuankai Huo'
+  "gpu_memory": 12G
+  "cpu_memory": 8G
+  "version": 1.1
+  'description': "whole brain segmentation with SLANT deep learning algorithm (gpu)"
