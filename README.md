@@ -52,8 +52,8 @@ The SLANT is a whole brain segmentation pipeline that contains (1) pre-processin
 
 ### If you only have CPU, you can use the following CPU version of the docker. (50GB Memory might be required using CPU!)
 ```
-sudo docker pull vuiiscci/slant:deep_brain_seg_v1_1_0
-sudo docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/public:deep_brain_seg_v1_1_0 /extra/run_deep_brain_seg.sh
+sudo docker pull vuiiscci/slant:deep_brain_seg_v1_1_0_cpu
+sudo docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/public:deep_brain_seg_v1_1_0_cpu /extra/run_deep_brain_seg.sh
 ```
 
 ## List of 45 Training Data and 5 Validation Data from OASIS study
