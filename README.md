@@ -4,7 +4,7 @@
 A T1 MRI scan can be segmented to 133 labels based on BrainCOLOR protocol(http://braincolor.mindboggle.info/protocols/).
 <img src="https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/test_volume_result.jpg" width="600px"/>
 
-[![Secondary development for SLANT Docker [30 mins]](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/youtube.png)](https://youtu.be/vN_1A2UzPHQ)
+[![Secondary development for SLANT Docker [30 mins]](https://github.com/MASILab/SLANTbrainSeg/blob/master/screenshot/youtube.png width="600px")](https://youtu.be/vN_1A2UzPHQ)
 
 It has been implemented as a single Docker.
 ```diff
