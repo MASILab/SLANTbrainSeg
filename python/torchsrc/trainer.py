@@ -56,11 +56,12 @@ def weighted_center(input,threshold=0.75):
 
 
 def save_images(results_epoch_dir,data,sub_name,cate_name,pred_lmk,target=None):
-    saveOneImg(data[0, 0, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_trueGray")
-    for i in range(pred_lmk.size()[1]):
-        saveOneImg(pred_lmk[0, i, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_pred%d" % (i))
-        if not (target is None):
-            saveOneImg(target[0, i, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_true%d" % (i))
+    with torch.no_grad():
+        saveOneImg(data[0, 0, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_trueGray")
+        for i in range(pred_lmk.size()[1]):
+            saveOneImg(pred_lmk[0, i, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_pred%d" % (i))
+            if not (target is None):
+                saveOneImg(target[0, i, :, :].data.cpu().numpy(), results_epoch_dir, cate_name,sub_name, "_true%d" % (i))
 
 
 
@@ -172,27 +173,28 @@ class Trainer(object):
         results_epoch_dir = osp.join(out,'epoch_%04d' % self.epoch)
         mkdir(results_epoch_dir)
 
-        for batch_idx, (data,target,sub_name) in tqdm.tqdm(
-                # enumerate(self.test_loader), total=len(self.test_loader),
-                enumerate(self.test_loader), total=len(self.test_loader),
-                desc='Valid epoch=%d' % self.epoch, ncols=80,
-                leave=False):
+        with torch.no_grad():
+            for batch_idx, (data,target,sub_name) in tqdm.tqdm(
+                    # enumerate(self.test_loader), total=len(self.test_loader),
+                    enumerate(self.test_loader), total=len(self.test_loader),
+                    desc='Valid epoch=%d' % self.epoch, ncols=80,
+                    leave=False):
 
-            if self.cuda:
-                data, target = data.cuda(), target.cuda()
-            data, target = Variable(data,volatile=True), Variable(target,volatile=True)
+                if self.cuda:
+                    data, target = data.cuda(), target.cuda()
+                data, target = Variable(data,volatile=True), Variable(target,volatile=True)
 
-            pred = self.model(data)
+                pred = self.model(data)
 
-            lbl_pred = pred.data.max(1)[1].cpu().numpy()[:,:, :].astype('uint8')
-            batch_num = lbl_pred.shape[0]
-            for si in range(batch_num):
-                curr_sub_name = sub_name[si]
-                out_img_dir = os.path.join(results_epoch_dir, 'seg')
-                mkdir(out_img_dir)
-                out_nii_file = os.path.join(out_img_dir,('%s_seg.nii.gz'%(curr_sub_name)))
-                seg_img = nib.Nifti1Image(lbl_pred[si], affine=np.eye(4))
-                nib.save(seg_img, out_nii_file)
+                lbl_pred = pred.data.max(1)[1].cpu().numpy()[:,:, :].astype('uint8')
+                batch_num = lbl_pred.shape[0]
+                for si in range(batch_num):
+                    curr_sub_name = sub_name[si]
+                    out_img_dir = os.path.join(results_epoch_dir, 'seg')
+                    mkdir(out_img_dir)
+                    out_nii_file = os.path.join(out_img_dir,('%s_seg.nii.gz'%(curr_sub_name)))
+                    seg_img = nib.Nifti1Image(lbl_pred[si], affine=np.eye(4))
+                    nib.save(seg_img, out_nii_file)
 
             # if self.epoch==0:
             #     lbl_target = target.data.max(1)[1].cpu().numpy()[:,:, :].astype('uint8')
@@ -282,17 +284,13 @@ class Trainer(object):
                 # torch.save(self.model.state_dict(), model_pth)
 
     def test_epoch(self):
-        for epoch in tqdm.trange(self.epoch, self.max_epoch,
-                                 desc='Test', ncols=80):
-            self.epoch = epoch
-            train_root_dir = osp.join(self.train_root_dir, 'models')
+        with torch.no_grad():
+            for epoch in tqdm.trange(self.epoch, self.max_epoch,
+                                    desc='Test', ncols=80):
+                self.epoch = epoch
+                train_root_dir = osp.join(self.train_root_dir, 'models')
 
-            model_pth = '%s/model_epoch_%04d.pth' % (train_root_dir, epoch)
-            if os.path.exists(model_pth):
-                self.model.load_state_dict(torch.load(model_pth))
-                self.validate()
-
-             
-
-
-
+                model_pth = '%s/model_epoch_%04d.pth' % (train_root_dir, epoch)
+                if os.path.exists(model_pth):
+                    self.model.load_state_dict(torch.load(model_pth))
+                    self.validate()
