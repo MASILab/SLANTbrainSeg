@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright (c) 2026, Yuankai Huo
+Copyright (c) 2018-2026, Vanderbilt University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
